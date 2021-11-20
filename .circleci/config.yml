@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: caledbi/r.ci:4.1.2
+      - image: scaledbi/r.ci:4.1.2
     steps:
       - checkout
       - run:

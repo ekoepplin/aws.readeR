@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/main
+    working_directory: ~/aws.connectoR
     docker:
-      - image: thomaschln/r-devtools
+      - image: scaledbi/r.ci:4.1.2
     environment:
       CODECOV_TOKEN=4d7d51d2-586f-4def-9632-4ab371d17b9f
     steps:
@@ -15,7 +15,7 @@ jobs:
             - deps1-
       - run:
           command: |
-            R -e 'sessionInfo()'
+            R -e 'devtools::install_deps(dependencies = TRUE)'
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "DESCRIPTION" }}
           paths:

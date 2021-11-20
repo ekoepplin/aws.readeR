@@ -6,11 +6,11 @@ devtools::load_all()
 # Create NAMESPACE
 devtools::document()
 # Exclude from top level
-devtools::use_build_ignore(c("maintain.R","run_on_jenkins.R","messagess.Rout","secrets.R"))
+devtools::use_build_ignore(c("maintain_Package.R"))
 # Test package locally
 devtools::check(document = FALSE)
 # test one specific file
-file_to_test <- system.file("tests/testthat", "test-sometest.R", package = "teamserverOM")
+file_to_test <- system.file("tests/testthat", "test-sometest.R", package = "aws.connectoR")
 testthat::test_file(file_to_test)
 # Determine code coverage
 cov <- covr::package_coverage()

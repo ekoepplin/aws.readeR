@@ -1,3 +1,5 @@
+# Image is used for CI and has been managed in https://hub.docker.com/repository/docker/scaledbi/r.ci 
+
 FROM r-base:4.1.2
 
 RUN apt-get update  \

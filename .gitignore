@@ -1,0 +1,9 @@
+.Rproj.user
+.DS_Store
+.Rhistory
+.idea
+.httr-oauth
+.RData
+.vscode/
+.metals/
+^maintain_Package\.R$

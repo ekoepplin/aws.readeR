@@ -1,0 +1,8 @@
+^renv$
+^renv\.lock$
+^maintain_Package\.R$
+^README\.Rmd$
+^codecov.yml
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$

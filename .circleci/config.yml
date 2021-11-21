@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: scaledbi/r.ci:4.1.2
     environment:
-      CODECOV_TOKEN=708279dc-f62d-4f89-8feb-c046ec196425
+      CODECOV_TOKEN=4d7d51d2-586f-4def-9632-4ab371d17b9f
     steps:
       - checkout
       - restore_cache:

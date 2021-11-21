@@ -1,31 +1,16 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/main
     docker:
-      - image: scaledbi/r.ci:4.1.2
-    environment:
-      CODECOV_TOKEN=4d7d51d2-586f-4def-9632-4ab371d17b9f
+      - image: rocker/verse:4.1.2
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - deps1-{{ .Branch }}-{{ checksum "DESCRIPTION" }}
-            - deps1-{{ .Branch }}
-            - deps1-
       - run:
-          command: |
-            R -e 'devtools::install_deps(dependencies = TRUE)'
-      - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "DESCRIPTION" }}
-          paths:
-            - "/usr/local/lib/R/site-library"
+          name: Install package dependencies
+          command: R -e "devtools::install_deps(dep = TRUE)"
       - run:
-          command: |
-            R -e 'devtools::check()'
+          name: Build package
+          command: R CMD build .
       - run:
-          command: |
-            R -e 'covr::codecov()'
-      - store_artifacts:
-          path: man/
-          destination: man
+          name: Check package
+          command: R CMD check *tar.gz

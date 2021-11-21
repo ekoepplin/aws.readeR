@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/aws.connectoR
+    working_directory: ~/main
     docker:
-      - image: scaledbi/r.ci:4.1.2
+      - image: rocker/tidyverse:4.1.2
     environment:
       CODECOV_TOKEN=4d7d51d2-586f-4def-9632-4ab371d17b9f
     steps:

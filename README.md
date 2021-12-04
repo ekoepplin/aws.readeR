@@ -17,6 +17,7 @@ aws.readeR
 
 - [x] Set up CI
 - [x] Set up Coder Coverage
+- [x] Set up some sort of unit tests
 - [ ] Set up some sort of version control
 - [ ] Query AWS Athena via JDBC
     - [ ] Support for MFA  

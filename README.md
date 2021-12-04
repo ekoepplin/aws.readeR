@@ -24,6 +24,3 @@ aws.readeR
 - [ ] Write parquet files
 - [ ] Read feather files
 - [ ] Write feather files
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley

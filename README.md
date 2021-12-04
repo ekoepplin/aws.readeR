@@ -13,11 +13,17 @@ aws.readeR
 
 *R client to interact with aws s3 & aws athena*
 
-## What is Inside?
+### Next on Agenda...
 
-
-### Stable Version
-
-
-### Current Development Version
-
+- [x] Set up CI
+- [x] Set up Coder Coverage
+- [ ] Set up some sort of version control
+- [ ] Query AWS Athena via JDBC
+    - [ ] Support for MFA  
+- [ ] Read parquet files
+- [ ] Write parquet files
+- [ ] Read feather files
+- [ ] Write feather files
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
